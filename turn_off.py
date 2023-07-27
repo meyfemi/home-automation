@@ -4,7 +4,7 @@ import tinytuya
 d = tinytuya.OutletDevice(device_id, ip_address, local_key)
 d.set_version(3.3)
 data = d.status()
-
+# get the state of the bulb
 switch_state = data['dps']['0']
 if switch_state:
     d.turn_off()
